@@ -17,7 +17,14 @@ namespace MyRoomIoT.Commands
         //実行可能かどうかを判断する
         public bool CanExecute(object parameter)
         {
-            return true;
+            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
         //実行するときは以下を呼び出される
         public void Execute(object parameter)

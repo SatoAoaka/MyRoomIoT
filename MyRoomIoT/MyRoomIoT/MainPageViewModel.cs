@@ -10,6 +10,7 @@ namespace MyRoomIoT
     internal class MainPageViewModel : ViewModelBase
     {
         private string _labelText;
+        public string sendURL = MyData.URL;
 
         public ICommand SendLightOn { get; }
         public ICommand SendLightOff { get; }
@@ -27,15 +28,15 @@ namespace MyRoomIoT
         }
         public MainPageViewModel()
         {
-            SendStopAir = new Send(actionMaker(MyData.STOP_AIR));
-            SendStartHot = new Send(actionMaker(MyData.START_HOT));
-            SendLightOn = new Send(actionMaker(MyData.LIGHT_ON));
-            SendLightOff = new Send(actionMaker(MyData.LIGHT_OFF));
-            SendLightNight = new Send(actionMaker(MyData.LIGHT_Night));
+            SendStopAir = new Send(ActionMaker(MyData.STOP_AIR));
+            SendStartHot = new Send(ActionMaker(MyData.START_HOT));
+            SendLightOn = new Send(ActionMaker(MyData.LIGHT_ON));
+            SendLightOff = new Send(ActionMaker(MyData.LIGHT_OFF));
+            SendLightNight = new Send(ActionMaker(MyData.LIGHT_Night));
             LabelText = "ここにHTMLレスポンスが表示されます";
         }
 
-        private Action actionMaker(string fileName)
+        private Action ActionMaker(string fileName)
         {
             Action action = async () =>
             {
