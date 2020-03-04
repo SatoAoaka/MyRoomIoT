@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using MyRoomIoT.Commands;
 using MyRoomIoT.Model;
@@ -23,18 +24,18 @@ namespace MyRoomIoT
         }
         public MainPageViewModel()
         {
-            SendStopAir = new Send(Send_HTMLStopAir);
-            SendStartHot = new Send(Send_HTMLStartHot);
+            SendStopAir = new Send(actionMaker("stop_air.dat"));
+            SendStartHot = new Send(actionMaker("start_hot.dat"));
             LabelText = "ここにHTMLレスポンスが表示されます";
         }
 
-        private async void Send_HTMLStopAir()
-        {           
-            LabelText = await HTMLRequest.SendPostAsync("stop_air.dat");
-        }
-        private async void Send_HTMLStartHot()
+        private Action actionMaker(string fileName)
         {
-            LabelText = await HTMLRequest.SendPostAsync("start_hot.dat");
+            Action action = async () =>
+            {
+                LabelText = await HTMLRequest.SendPostAsync(fileName);
+            };
+            return action;
         }
     }
 }
