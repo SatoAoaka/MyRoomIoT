@@ -10,13 +10,13 @@ namespace MyRoomIoT.Model
             string result ="";
             var parameters = new Dictionary<string, string>()
             {
-                {"pass", "testPass" },
+                {"pass", MyData.PASS },
                 {"data", fileName }
             };
             var content = new FormUrlEncodedContent(parameters);
             using(var httpClient = new HttpClient())
             {
-                var respns = await httpClient.PostAsync("http://aoakaserver.mydns.jp:4515/starter.php", content);//"http://106.73.2.225:4515/starter.php", content);
+                var respns = await httpClient.PostAsync(MyData.URL, content);
                 result = respns.ToString();
             }
 
