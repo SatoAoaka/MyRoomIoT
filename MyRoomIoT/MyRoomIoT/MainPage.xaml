@@ -24,9 +24,9 @@
         </StackLayout>
         <StackLayout Grid.Row="1">
             <Label Text="照明" HorizontalTextAlignment="Center"/>
-            <Button Text="点灯"/>
-            <Button Text="消灯"/>
-            <Button Text="常夜灯"/>
+            <Button Text="点灯" Command="{Binding SendLightOn}"/>
+            <Button Text="消灯" Command="{Binding SendLightOff}"/>
+            <Button Text="常夜灯" Command="{Binding SendLightNight}"/>
         </StackLayout>
 
         <Label Grid.Row="2" Text="{Binding LabelText}"/>
