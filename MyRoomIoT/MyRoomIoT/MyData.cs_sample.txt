@@ -2,11 +2,17 @@
 {
     internal class MyData
     {
+	    //一応認証してるパスワードです。php側で保持しているハッシュ値と一致するかを確認します。
+		//別のパスワードにしたい場合はsha256で再度ハッシュ値を出力してphp側に書いておいてください。
         internal const string PASS = "";
 
+		//URLは、サーバーのstarter.phpまでを指定します。
+		//LANの外からアクセスするときのURLです。
         internal const string URL = "";
-        internal const string URL_HOME = "";
+        //LANの中からアクセスするときのURLです。だいたいは192.168.xxx.xxx/starter.phpになるはず
+		internal const string URL_HOME = "";
 
+		//送信したい赤外線データのファイル名です。作りたいボタンの数だけ用意します。
         internal const string STOP_AIR = "";
         internal const string START_HOT = "";
         internal const string LIGHT_ON = "";
