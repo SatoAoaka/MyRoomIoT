@@ -1,0 +1,16 @@
+﻿namespace MyRoomIoT
+{
+    internal class MyData
+    {
+        internal const string PASS = "";
+
+        internal const string URL = "";
+        internal const string URL_HOME = "";
+
+        internal const string STOP_AIR = "";
+        internal const string START_HOT = "";
+        internal const string LIGHT_ON = "";
+        internal const string LIGHT_OFF = "";
+        internal const string LIGHT_Night = "";
+    }
+}
