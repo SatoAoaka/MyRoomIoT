@@ -6,6 +6,8 @@ Xamarin 4.12.3.83
 ラズパイのOS　Raspbian
 php　7.2.9-1+b2
 python 3.7.3
+Raspberry Pi 3 Model b+
+赤外線モジュール ADRSIR(BitTradeOne)
 です。
 
 
