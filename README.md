@@ -18,8 +18,9 @@ Windowsとandroidは動作確認済みです。
 
 ラズパイにADRSIRを積んで各種設定。
 赤外線データのファイルを用意。
-ファイルを配置して、MyData.csを編集。
-starter.phpにハッシュ値を設定。
+MyData.csを編集。
+MyDataに用意したファイル名を使ってボタンを作成(MainPage.xaml)とイベントの設定(MainPageViewModel.cs)
+starter.phpにハッシュ値を設定。サーバーにファイルを配置してApache起動
 VSでコンパイルしてリモコン操作
 
 で動くと思います。
