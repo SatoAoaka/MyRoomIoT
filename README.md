@@ -21,7 +21,8 @@ Windowsとandroidは動作確認済みです。
 MyData.csを編集。
 MyDataに用意したファイル名を使ってボタンを作成(MainPage.xaml)とイベントの設定(MainPageViewModel.cs)
 starter.phpにハッシュ値を設定。サーバーにファイルを配置してApache起動
-VSでコンパイルしてリモコン操作
+VSでデバッグ起動してリモコン操作
 
 で動くと思います。
 
+リリースビルドした場合にはUWPの配置やAndroidアプリの配置方法に従ってください。
