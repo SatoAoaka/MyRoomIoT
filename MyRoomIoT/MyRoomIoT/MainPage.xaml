@@ -29,7 +29,11 @@
             <Button Text="常夜灯" Command="{Binding SendLightNight}"/>
         </StackLayout>
 
-        <Label Grid.Row="2" Text="{Binding LabelText}"/>
+        <StackLayout Grid.Row="2">
+            <Label Text="ステータス画面"/>
+            <Label Text="{Binding LabelText}"/>
+        </StackLayout>
+
 
     </Grid>
     

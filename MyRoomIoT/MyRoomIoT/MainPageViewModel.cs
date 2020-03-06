@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using MyRoomIoT.Commands;
 using MyRoomIoT.Model;
@@ -33,7 +32,7 @@ namespace MyRoomIoT
             SendLightOn = new Send(ActionMaker(MyData.LIGHT_ON));
             SendLightOff = new Send(ActionMaker(MyData.LIGHT_OFF));
             SendLightNight = new Send(ActionMaker(MyData.LIGHT_Night));
-            LabelText = "ここにHTMLレスポンスが表示されます";
+            LabelText = "";
         }
 
         private Action ActionMaker(string fileName)

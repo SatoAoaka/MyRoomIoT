@@ -37,10 +37,12 @@ namespace MyRoomIoT.Model
                     catch
                     {
                         Exception ex = e;
+                        result = "失敗しました！\n";
                         while (ex != null)
                         {
                             System.Diagnostics.Debug.WriteLine("例外メッセージ ", ex.Message);
                             ex = ex.InnerException;
+                            result += ex.Message + "\n";
                         }
                     }
                 }             
