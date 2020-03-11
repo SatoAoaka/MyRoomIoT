@@ -16,7 +16,10 @@ namespace MyRoomIoT.Model
                 {"data", fileName }
             };
             var content = new FormUrlEncodedContent(parameters);
-            using(var httpClient = new HttpClient())
+            //オレオレ証明書対策
+            var httpClientHandler = new HttpClientHandler();
+            httpClientHandler.ServerCertificateCustomValidationCallback = delegate { return true; };
+            using (var httpClient = new HttpClient(httpClientHandler))
             {
                 HttpResponseMessage respns;
                 //家庭内LANかどうかを識別出来たら例外で分岐しなくてよくなりそう
@@ -51,3 +54,5 @@ namespace MyRoomIoT.Model
         }
     }
 }
+
+
