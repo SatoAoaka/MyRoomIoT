@@ -1,5 +1,4 @@
 # MyRoomIot
-マスターのログに個人情報が含まれるため。デベロップブランチのみリモートに挙げています
 私の環境は 
 Visual Studio Enterprise 2017 Version 15.9.17
 Xamarin 4.12.3.83
